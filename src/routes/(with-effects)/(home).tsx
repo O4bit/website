@@ -47,7 +47,8 @@ export default (() => {
                         <span aria-hidden="true">!</span>
                     </h1>
                     <p style="text-wrap: balance">
-                        I'm a {age}-year-old self-taught full-stack developer and a Back-end Developer. I make Back-end API and Software.
+                        I'm a {age}-year-old self-taught full-stack developer and a Back-end Developer. I make Back-end
+                        API and Software.
                     </p>
                 </Column>
                 <Row as="ul" data-no-marker="true" gap="md" centerHorizontal wrap aria-label="My socials">

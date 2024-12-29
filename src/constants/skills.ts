@@ -20,11 +20,6 @@ const Skills = [
         link: 'https://www.typescriptlang.org/',
     },
     {
-        name: 'React',
-        icon: '/assets/images/skills/react.svg',
-        link: 'https://react.dev',
-    },
-    {
         name: 'SolidJS',
         icon: '/assets/images/skills/solidjs.svg',
         link: 'https://solidjs.com',
@@ -40,14 +35,34 @@ const Skills = [
         link: 'https://bun.sh',
     },
     {
-        name: 'Fastify',
-        icon: '/assets/images/skills/fastify.svg',
-        link: 'https://fastify.io',
+        name: 'C++',
+        icon: '/assets/images/skills/CPP.svg',
+        link: 'https://cplusplus.com',
     },
     {
-        name: 'Figma',
-        icon: '/assets/images/skills/figma.svg',
-        link: 'https://figma.com',
+        name: 'C',
+        icon: '/assets/images/skills/C.svg',
+        link: 'https://cprogramming.com',
+    },
+    {
+        name: 'Cloudflare',
+        icon: '/assets/images/skills/Cloudflare-Dark.svg',
+        link: 'https://cloudflare.com',
+    },
+    {
+        name: 'Nginx',
+        icon: '/assets/images/skills/Nginx.svg',
+        link: 'https://nginx.org',
+    },
+    {
+        name: 'Vercel',
+        icon: '/assets/images/skills/Vercel-Dark.svg',
+        link: 'https://vercel.com',
+    },
+    {
+        name: 'Docker',
+        icon: '/assets/images/skills/docker.svg',
+        link: 'https://docker.com',
     },
     {
         name: 'Linux (Basics)',

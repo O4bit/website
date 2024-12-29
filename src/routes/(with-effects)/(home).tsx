@@ -23,12 +23,13 @@ export default (() => {
 
     return (
         <Page>
-            <Title>Palm (PalmDevs)</Title>
+            <Title>Orbit (O4bit)</Title>
             <Meta
                 name="description"
-                content={`I'm a ${age}-year-old self-taught full-stack developer and a UI/UX designer. I want to make useful things look good and accessible to everyone. I am known for working in the open-source world, and designing applications.`}
+                content={`I'm a ${age}-year-old self-taught full-stack developer and a UI/UX designer. 
+                I make Back-end API and Software..`}
             />
-            <Meta property="og:image" content="/assets/og/image.webp" />
+            <Meta property="og:image" content="/assets/og/ezgif-7-2eaf8a8b05.gif" />
             <Meta property="og:image:width" content="500" />
             <Meta property="og:image:height" content="500" />
             <Meta property="og:image:type" content="image/webp" />
@@ -41,13 +42,12 @@ export default (() => {
                             style="font-weight: var(--weight-bolder)"
                             class={sharedStyles.GradientText}
                         >
-                            Palm
+                            Orbit
                         </span>
                         <span aria-hidden="true">!</span>
                     </h1>
                     <p style="text-wrap: balance">
-                        I'm a {age}-year-old self-taught full-stack developer and a UI/UX designer. I want to make
-                        useful things look good and accessible to everyone.
+                        I'm a {age}-year-old self-taught full-stack developer and a Back-end Developer. I make Back-end API and Software.
                     </p>
                 </Column>
                 <Row as="ul" data-no-marker="true" gap="md" centerHorizontal wrap aria-label="My socials">

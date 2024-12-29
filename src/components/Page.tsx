@@ -17,7 +17,7 @@ export const Page: Component<ComponentProps<'main'> & { noCrawl?: boolean; noSet
                 <Meta name="robots" content="noindex, nofollow" />
             </Show>
             <Show when={!props.noSetCanonical}>
-                <Link rel="canonical" href={`https://palmdevs.me${loc.pathname}`} />
+                <Link rel="canonical" href={`https://orbit.deepspaceproductions.net${loc.pathname}`} />
             </Show>
             <Column
                 {...(props as ComponentProps<'div'>)}

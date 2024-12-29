@@ -75,7 +75,7 @@ const GlobalLayout: Component<{ children: JSX.Element }> = props => {
                     {
                         name: 'Source code',
                         icon: IconSource,
-                        href: 'https://github.com/PalmDevs/website',
+                        href: 'https://github.com/O4bit/website',
                     },
                 ]}
             />

@@ -7,17 +7,17 @@ import type { IconType } from '~/components'
 const Socials = {
     github: {
         name: 'GitHub',
-        href: 'https://github.com/PalmDevs',
+        href: 'https://github.com/O4bit',
         icon: IconGitHub,
     },
     discord: {
         name: 'Discord',
-        href: 'https://discord.com/users/629368283354628116',
+        href: 'https://discord.com/users/719923357046538243',
         icon: IconDiscord,
     },
     mail: {
         name: 'Email',
-        href: 'mailto:contact+web@palmdevs.me',
+        href: 'mailto:contact+web@deepspaceproductions.net',
         icon: IconEmail,
     },
 } as const satisfies Record<string, { name: string; href: string; icon: IconType }>

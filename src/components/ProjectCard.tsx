@@ -12,7 +12,13 @@ const ProjectCard: Component<ProjectCardProps> = props => {
             {...props}
             preview={() => (
                 <Column aria-hidden="true" centerHorizontal centerVertical class={styles.ImageContainer}>
-                    <img draggable="false" loading="lazy" src={props.image} alt={props.name} />
+                    <img
+                        draggable="false"
+                        loading="lazy"
+                        src={props.image}
+                        alt={props.name}
+                        style={{ width: '100%', height: 'auto' }} // Adjust the size here
+                    />
                 </Column>
             )}
         />

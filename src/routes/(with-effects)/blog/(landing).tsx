@@ -14,7 +14,7 @@ export default (() => {
 
     return (
         <Page>
-            <Title>Blog • Palm (PalmDevs)</Title>
+            <Title>Blog • Orbit (O4bit)</Title>
             <Meta
                 name="description"
                 content="Visit to see all my blog posts, usually containing some interesting and random stuff."

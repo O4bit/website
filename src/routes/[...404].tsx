@@ -14,9 +14,9 @@ import sharedStyles from '~/styles/shared.module.css'
 
 const FourOhFourPage: Component<{ withoutDocTitle?: boolean }> = props => (
     <Page noCrawl noSetCanonical>
-        <Link rel="canonical" href="https://palmdevs.me" />
+        <Link rel="canonical" href="https://orbit.deepspaceproductions.net" />
         <Show when={!props.withoutDocTitle}>
-            <Title>404 • Palm (PalmDevs)</Title>
+            <Title>404 • Orbit (Orbit)</Title>
         </Show>
         <Meta name="description" content="This page doesn't exist. Did you take a wrong turn?" />
         <HttpStatusCode code={404} />

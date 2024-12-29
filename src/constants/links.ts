@@ -1,5 +1,5 @@
 const Repository = {
-    landing: 'https://github.com/PalmDevs/website',
+    landing: 'https://github.com/O4bit/website',
     get issues() {
         return `${this.landing}/issues`
     },

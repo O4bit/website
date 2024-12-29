@@ -1,0 +1,55 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.2/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "useLiteralKeys": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "off",
+        "useEnumInitializers": "off",
+        "useNodejsImportProtocol": "off"
+      }
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "lineEnding": "crlf"
+    },
+    "parser": {
+      "allowComments": true
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "arrowParentheses": "asNeeded",
+      "indentStyle": "space",
+      "indentWidth": 4,
+      "lineWidth": 120,
+      "quoteProperties": "asNeeded",
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all",
+      "lineEnding": "crlf"
+    }
+  },
+  "css": {
+    "parser": {
+      "cssModules": true
+    }
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "include": ["*.jsx", "*.json", "*.tsx", "*.js", "*.ts", "*.css"],
+    "ignore": ["dist/**/*", "node_modules/**/*", ".vinxi/**/*", ".output/**/*"]
+  }
+}

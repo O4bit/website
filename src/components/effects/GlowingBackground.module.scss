@@ -1,0 +1,37 @@
+@use "../../styles/queries";
+
+.Orb {
+  background: var(--bg-orb);
+  width: 35vmax;
+  height: 35vmax;
+}
+
+.Container {
+  position: fixed;
+  overflow: hidden;
+  inset: 0;
+  width: 100%;
+  height: 200%;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.25;
+  z-index: var(--layer-effect);
+  transition: opacity 5s, top 1.5s var(--easing);
+
+  & > .Orb {
+    position: absolute;
+    width: 40vmax;
+    height: 40vmax;
+    transition: 30s;
+    transition-property: top, left, transform;
+  }
+
+  @media (max-width: queries.$mw-mobile) {
+    opacity: 0.35;
+
+    & > .Orb {
+      width: 45vmax;
+      height: 45vmax;
+    }
+  }
+}

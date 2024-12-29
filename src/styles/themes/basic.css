@@ -1,0 +1,85 @@
+:root,
+:root[data-theme="light"] {
+	--bg: #f4f9ff;
+
+	--gradient: linear-gradient(
+		230deg,
+		var(--gradient-primary) 25%,
+		var(--gradient-secondary) 70.95%
+	);
+	--gradient-primary: #29a873;
+	--gradient-secondary: #007cfa;
+
+	--neutral-highest: #000000;
+	--neutral-high: #202020;
+	--neutral-medium: #2c2c2c;
+	--neutral-lowest: #566472;
+
+	--neutral-variant-high: #00468b;
+	--neutral-variant-low: #39485c;
+
+	--surface-highest: #c2ced6;
+	--surface-high: #d1d6df;
+	--surface-medium: #e1e7f2;
+	--surface-low: #f2f7ff;
+
+	--surface-high-full-opacity: var(--surface-high);
+	--surface-medium-full-opacity: var(--surface-medium);
+	--surface-low-full-opacity: var(--surface-low);
+
+	--surface-medium-high-opacity: var(--surface-medium);
+	--surface-low-high-opacity: var(--surface-low);
+
+	--primary: #006fe9;
+	--on-primary: #ebf9ff;
+
+	--secondary: #2b3f48;
+	--on-secondary: #dddddd;
+
+	--tertiary: #3c444e;
+
+	--interaction-glow: rgba(0, 0, 0, 0.075);
+}
+
+:root[data-theme="dark"] {
+	--bg: #0e1114;
+	--bg-orb: radial-gradient(
+		circle at 50% 50%,
+		rgba(0, 194, 255, 0.07) 0%,
+		rgba(0, 212, 173, 0.03) 45%,
+		rgba(1, 255, 157, 0) 70%
+	);
+
+	--gradient-primary: #4feaa9;
+	--gradient-secondary: #57b7d9;
+
+	--neutral-highest: #ffffff;
+	--neutral-high: #dddddd;
+	--neutral-medium: #cccccc;
+	--neutral-lowest: #7f8b96;
+
+	--neutral-variant-high: #81b0c3;
+	--neutral-variant-low: #9da8ac;
+
+	--surface-high-full-opacity: hsla(204, 14%, 15%, 1);
+	--surface-medium-full-opacity: hsla(204, 14%, 13%, 1);
+	--surface-low-full-opacity: hsla(204, 14%, 11%, 1);
+
+	--surface-medium-high-opacity: hsla(220, 23%, 19%, 0.65);
+	--surface-low-high-opacity: hsla(220, 20%, 15%, 0.65);
+
+	--surface-highest: hsla(216, 20%, 34%, 0.15);
+	--surface-high: hsla(216, 18%, 32%, 0.15);
+	--surface-medium: hsla(220, 23%, 28%, 0.15);
+	--surface-low: hsla(220, 20%, 24%, 0.15);
+
+	--primary: #4ac9ff;
+	--on-primary: #003247;
+
+	--secondary: #253c57;
+	--on-secondary: #eeeeee;
+
+	--tertiary: #87b0c1;
+
+	--interaction-glow: rgba(255, 255, 255, 0.025);
+}

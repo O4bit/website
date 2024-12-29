@@ -1,0 +1,31 @@
+@use '../../styles/queries';
+
+/* Increasing specificity to override global styles */
+.Content.Content {
+  position: relative;
+  max-width: 52rem;
+
+  padding-bottom: var(--gap-insanely-large);
+}
+
+.ScrollUpContainer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  padding: var(--gap-very-large);
+  transition: var(--duration-medium) var(--easing);
+  transition-property: opacity, transform;
+  z-index: var(--layer-nav);
+  
+  @media (max-width: queries.$mw-mobile) {
+    padding: var(--gap-large);
+  }
+
+  &:not([data-scrolled="true"]) {
+    transition: var(--duration-short) var(--easing-quick);
+    opacity: 0;
+    transform: scale(0.75);
+    pointer-events: none;
+  }
+}

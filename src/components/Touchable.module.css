@@ -1,0 +1,50 @@
+.Container {
+	position: relative;
+	cursor: pointer;
+
+	transition: var(--duration-medium) var(--easing-quick);
+
+	&:active {
+		transform: scale(var(--interaction-click-scale));
+	}
+
+	&:is([aria-disabled="true"], :disabled) {
+		cursor: not-allowed;
+		transform: unset;
+	}
+
+	&::before {
+		content: "";
+		inset: 0;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+
+		transition: opacity var(--duration-short);
+
+		border-radius: inherit;
+		opacity: 0;
+		/* TODO: Put as constant? (24rem) */
+		background: radial-gradient(
+			24rem circle at calc(var(--comp-mx) * 1px) calc(var(--comp-my) * 1px),
+			var(--interaction-glow),
+			transparent
+		);
+
+		z-index: var(--layer-effect);
+	}
+
+	&:where(:hover, :focus-visible) {
+		transform: scale(var(--interaction-hover-scale));
+	}
+
+	&:not([aria-disabled="true"], :disabled):hover::before {
+		opacity: 1;
+	}
+}
+
+.WithoutHoverInteractionEffect {
+	&:where(:hover, :focus-visible) {
+		transform: unset;
+	}
+}

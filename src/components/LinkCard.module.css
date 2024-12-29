@@ -1,0 +1,44 @@
+.Card {
+	width: 100%;
+	height: 100%;
+
+	overflow: hidden;
+	background-color: var(--surface-low);
+	outline: var(--line-style) var(--surface-medium);
+	outline-offset: -2px;
+	border-radius: var(--radius-larger);
+	align-items: center;
+	text-decoration: none;
+	z-index: var(--layer-container);
+
+	transition: var(--duration-longer) var(--easing);
+	transition-property: background-color, transform, outline-color;
+
+	&:where(:hover, :focus-visible) {
+		background-color: var(--surface-medium);
+		outline-color: var(--surface-high);
+	}
+}
+
+.InfoContainer {
+	width: 100%;
+	padding: var(--gap-large);
+	justify-content: space-between;
+
+	font-size: 0.9em;
+
+	& p {
+		margin: 0;
+	}
+}
+
+.Hint {
+	color: var(--primary);
+	font-weight: var(--weight-label);
+	font-size: var(--text-label);
+
+	& > svg {
+		width: 1rem;
+		height: 1rem;
+	}
+}

@@ -1,0 +1,59 @@
+:root {
+	/* Fixed gaps */
+	--gap-insanely-small: 0.125rem;
+	--gap-smaller: 0.5rem;
+	--gap-small: 0.75rem;
+	--gap-medium: 1rem;
+	--gap-large: 1.25rem;
+	--gap-larger: 1.5rem;
+	--gap-very-large: 2rem;
+	--gap-insanely-large: 8rem;
+
+	/* Sizes */
+	--size-smaller: 1rem;
+	--size-small: 1.25rem;
+	--size-medium: 1.5rem;
+	--size-large: 2rem;
+	--size-larger: 2.5rem;
+
+	--size-relative-medium: 1.5em;
+
+	--line-style: 2px solid;
+	--line-style-thin: 1px solid;
+
+	/* Border radius sizes */
+	--radius-full: 1000px;
+	--radius-larger: 1.25rem;
+	--radius-large: 1rem;
+	--radius-medium: 0.75rem;
+	--radius-small: 0.5rem;
+	--radius-smaller: 0.25rem;
+
+	/* Durations */
+	--duration-shorter: 0.1s;
+	--duration-short: 0.25s;
+	--duration-medium: 0.5s;
+	--duration-long: 0.75s;
+	--duration-longer: 1s;
+
+	/* Easings */
+	/* Default easing, best for most animations */
+	--easing: cubic-bezier(0.19, 1, 0.22, 1);
+	/* Bouncy easing, best for interaction animations */
+	--easing-bounce: cubic-bezier(0, 1.25, 0.35, 1);
+	/* Quick easing, best for short animations */
+	--easing-quick: cubic-bezier(0, 0.6, 0.1, 1);
+	/* Very quick easing, best for short animations with a lot of movement */
+	--easing-very-quick: cubic-bezier(0, 0.85, 0, 1);
+
+	/* Interaction effects */
+	--interaction-click-scale: 0.985;
+	--interaction-zoomable-content-scale: 1.125;
+	/* --interaction-hover-scale: 1.025; */
+}
+
+@media not (pointer: fine) {
+	:root {
+		--interaction-click-scale: 0.95;
+	}
+}

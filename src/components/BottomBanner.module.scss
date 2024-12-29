@@ -1,0 +1,53 @@
+@use "../styles/queries";
+
+.Container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--layer-overlay);
+  width: 100%;
+  transition: bottom var(--duration-short) var(--easing-very-quick);
+  pointer-events: none;
+}
+
+.Banner {
+  position: relative;
+  padding: var(--gap-small) var(--gap-medium);
+  pointer-events: initial;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    bottom: 0;
+    background: var(--gradient);
+    border-radius: inherit;
+    z-index: -2;
+  }
+
+  & .Actions {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  // Desktop
+  @media (min-width: queries.$mw-mobile) {
+    width: queries.$mw-mobile;
+    left: auto;
+    right: auto;
+    margin-inline: auto;
+    border-radius: var(--gap-small) var(--gap-small) 0 0;
+    padding: var(--gap-small);
+    justify-content: space-between;
+  }
+}
+
+.Background {
+  position: absolute;
+  border-radius: inherit;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+}

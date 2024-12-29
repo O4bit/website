@@ -1,0 +1,112 @@
+.DockContainer {
+	width: 100%;
+	position: sticky;
+	top: 0;
+	z-index: var(--layer-nav);
+	pointer-events: none;
+	scrollbar-gutter: stable both-edges;
+}
+
+.Dock {
+	max-width: 100vw;
+	position: sticky;
+	top: var(--gap-medium);
+	margin-block: var(--gap-medium);
+	overflow-x: auto;
+	pointer-events: auto;
+
+	padding: var(--gap-smaller) var(--gap-small);
+	border-radius: var(--radius-full);
+
+	outline: var(--line-style) transparent;
+
+	transition: var(--duration-short);
+	transition-property: background-color, outline-color;
+
+	&:has(.ActiveItem) .Highlight {
+		opacity: 1;
+	}
+
+	&[data-scrolled="true"] {
+		background-color: var(--surface-low);
+		outline-color: var(--surface-medium);
+
+		& .Highlight {
+			background-color: var(--surface-high);
+		}
+
+		/* biome-ignore lint/correctness/noUnknownMediaFeatureName: How is this not known? */
+		@media not print and (prefers-contrast: more) and (
+				prefers-reduced-transparency: reduce
+			) and (prefers-reduced-motion: reduce) {
+			transition-property: background-color, outline-color, backdrop-filter,
+				-webkit-backdrop-filter;
+			background-color: var(--surface-low-high-opacity, var(--surface-low));
+
+			[data-theme="dark"] & {
+				-webkit-backdrop-filter: blur(var(--gap-medium)) brightness(60%);
+				backdrop-filter: blur(var(--gap-medium)) brightness(60%);
+			}
+
+			& .Highlight {
+				background-color: var(
+					--surface-medium-high-opacity,
+					var(--surface-medium)
+				);
+			}
+		}
+	}
+}
+
+.Highlight {
+	position: absolute;
+	/* Linked to padding-block of .Dock */
+	left: var(--gap-small);
+
+	background-color: var(--surface-medium);
+	border-radius: var(--radius-full);
+
+	/* Default opacity (hidden) */
+	opacity: 0;
+
+	transition: all var(--duration-medium) var(--easing-bounce);
+	transition-delay: var(--duration-shorter);
+}
+
+.Item {
+	padding: var(--gap-smaller) var(--gap-small);
+	border-radius: var(--radius-full);
+	background-color: transparent;
+	color: var(--neutral-high);
+
+	font: inherit;
+	font-weight: var(--weight-label);
+	text-decoration: none;
+
+	transition: all var(--duration-short) var(--easing-quick);
+
+	&:not(.ActiveItem):is(:hover, :active) {
+		background-color: var(--surface-low);
+		[data-scrolled="true"] & {
+			background-color: var(--surface-medium);
+		}
+	}
+
+	& > .Icon {
+		width: var(--size-medium);
+		height: var(--size-medium);
+
+		fill: currentColor;
+		opacity: 1;
+	}
+}
+
+.IconItem {
+	padding: var(--gap-smaller);
+}
+
+.Item:hover,
+.Item:active,
+.ActiveItem {
+	color: var(--neutral-highest);
+}

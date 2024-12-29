@@ -1,0 +1,91 @@
+@use "../../styles/queries";
+
+.ProjectsGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.75fr 0.25fr 1.5fr;
+  grid-template-rows: 1fr 0.25fr;
+  gap: var(--gap-small);
+  grid-template-areas:
+    "a b b b"
+    "c c d d";
+
+  & > * {
+    flex: 1;
+  }
+
+  & > :nth-child(4n + 1) {
+    grid-area: a;
+  }
+
+  & > :nth-child(4n + 2) {
+    grid-area: b;
+  }
+
+  & > :nth-child(4n + 3) {
+    grid-area: c;
+  }
+
+  & > :nth-child(4n + 4) {
+    grid-area: d;
+  }
+
+  @media (max-width: queries.$mw-mobile) {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      min-width: 16rem;
+    }
+  }
+}
+
+.SkillItem {
+  flex: 1;
+
+  & > .SkillContainer {
+    --interaction-glow: var(--surface-highest);
+    // --interaction-hover-scale: 1.075;
+
+    background-color: var(--surface-low);
+    color: var(--neutral-high);
+    border-radius: var(--radius-medium);
+    padding: var(--gap-small);
+    outline: var(--line-style) var(--surface-medium);
+
+    text-decoration: none;
+    white-space: nowrap;
+    justify-content: center;
+
+    &:where(:hover, :focus-visible) {
+      background-color: var(--surface-medium);
+      outline-color: var(--surface-high);
+    }
+
+    & > .SkillIcon {
+      width: var(--size-relative-medium);
+      height: var(--size-relative-medium);
+      object-fit: contain;
+    }
+  }
+}
+
+.JSXHeadingStart,
+.JSXHeadingEnd {
+  font-size: 2.25rem;
+  font-weight: var(--weight-bold);
+  font-family: "JetBrains Mono", monospace;
+  margin-block: 0;
+
+  & > span:is(:first-child, :last-child) {
+    user-select: none;
+  }
+}
+
+.JSXHeadingStart {
+  color: var(--neutral-highest);
+}
+
+.JSXHeadingEnd {
+  user-select: none;
+  color: var(--surface-medium);
+}

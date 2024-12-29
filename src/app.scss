@@ -1,0 +1,126 @@
+@import url("./styles/themes/basic.css");
+@import url("./styles/typography.scss");
+@import url("./styles/constants.css");
+@import url("./styles/layers.css");
+
+@import url("./styles/themes/halloween.css");
+
+:root {
+  --themeable-prop-content: color, fill, stroke-color;
+  --themeable-prop-layout: background-color, outline-color, border-color,
+  box-shadow;
+}
+
+p,
+span,
+a,
+button,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+img,
+svg {
+  transition-duration: 0.1s;
+  transition-property: var(--themeable-prop-content),
+  var(--themeable-prop-layout);
+}
+
+body,
+div,
+section,
+nav,
+footer,
+main {
+  transition-duration: 0.15s;
+  transition-property: var(--themeable-prop-layout);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  // Fixes precision issues with outline
+  outline-offset: -1px;
+}
+
+:root {
+  color-scheme: dark light;
+  font-size: 0.925rem;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  accent-color: var(--primary);
+  // Estimated height for NavDock + its margins
+  scroll-padding: 6rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: var(--bg);
+}
+
+button,
+input,
+a {
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
+input,
+button {
+  font-size: var(--text-label);
+}
+
+hr {
+  width: 100%;
+  border-radius: var(--radius-full);
+  border: var(--line-style) var(--surface-medium);
+  margin-block: var(--gap-larger);
+}
+
+ul[data-no-marker="true"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Disabling animations for users who prefer reduced motion
+// or in print mode
+@media (prefers-reduced-motion: reduce), print {
+  * {
+    scroll-behavior: auto !important;
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+}
+
+// Disabled elements will always have 50% opacity
+
+:disabled,
+[aria-disabled="true"] {
+  &:active {
+    pointer-events: none !important;
+  }
+
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  user-select: none !important;
+}
+
+// Focused elements will have a 2px outline with a bright color
+
+// Fixes outline animating weirdly
+:where(:is(button, a):not(:focus-visible)) {
+  outline: var(--line-style) transparent;
+  outline-offset: -2px;
+}
+
+:focus-visible {
+  outline: var(--line-style) var(--neutral-highest) !important;
+}

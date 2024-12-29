@@ -1,0 +1,29 @@
+.Grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+	gap: var(--gap-medium);
+	justify-items: center;
+	transition: all var(--easing-quick) var(--duration-medium);
+}
+
+.PostCardImageContainer {
+	width: 100%;
+	height: 10rem;
+	border-radius: var(--radius-larger);
+	background-color: var(--surface-medium);
+	overflow: hidden;
+	transition: inherit;
+	z-index: var(--layer-content);
+}
+
+.PostCardImage {
+	[data-comp="LinkCard"]:hover & {
+		transform: scale(var(--interaction-zoomable-content-scale));
+	}
+
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	aspect-ratio: var(--comp-ar);
+	transition: var(--easing) var(--duration-longer);
+}

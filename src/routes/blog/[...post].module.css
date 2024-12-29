@@ -1,0 +1,137 @@
+.Post {
+	width: 100%;
+
+	& :is(h1, h2, h3, h4, h5, h6) {
+		margin-block: var(--gap-very-large) var(--gap-large);
+	}
+
+	& h1 {
+		font-size: var(--text-title);
+	}
+
+	& h2 {
+		font-size: var(--text-subtitle);
+	}
+
+	& h3 {
+		font-size: var(--text-heading);
+	}
+
+	& :is(h4, h5, h6) {
+		color: var(--neutral-high);
+	}
+
+	& h4 {
+		font-size: var(--text-subheading);
+	}
+
+	& h5 {
+		font-size: var(--text);
+	}
+
+	& h6 {
+		font-size: var(--text-label);
+	}
+
+	& img {
+		width: 100%;
+		height: 100%;
+		border-radius: var(--radius-small);
+	}
+
+	& code {
+		background-color: var(--surface-medium);
+		border-radius: 0.25em;
+		font-size: 0.95em;
+	}
+
+	& figure {
+		margin: 0;
+	}
+
+	& pre {
+		background-color: var(--surface-medium);
+		border-radius: var(--radius-medium);
+		overflow-x: auto;
+
+		& code {
+			display: block;
+			counter-reset: line;
+			padding-block: var(--gap-medium);
+			/* This feels... cursed */
+			min-width: max-content;
+			width: 100%;
+
+			&:not(:has(:global(.line))) {
+				padding-inline-start: var(--gap-medium);
+			}
+
+			& > :global(.line) {
+				padding-inline: var(--gap-medium);
+			}
+
+			& > :global(.line)::before {
+				display: inline-block;
+				counter-increment: line;
+				content: counter(line);
+				color: var(--neutral-lowest);
+				margin-right: var(--gap-large);
+				/* Expecting only two max digits */
+				min-width: 2ch;
+				text-align: right;
+			}
+
+			& span {
+				:root[data-theme="dark"] & {
+					color: var(--shiki-dark) !important;
+				}
+
+				&:global(.highlighted) {
+					background-color: var(--surface-highest);
+					display: inline-block;
+					width: 100%;
+				}
+
+				&:global(.highlighted-word) {
+					background-color: color-mix(
+						in srgb,
+						currentColor 12.5%,
+						transparent 87.5%
+					);
+					border: var(--line-style-thin) currentColor;
+					border-radius: var(--radius-smaller);
+					padding-inline: var(--gap-insanely-small);
+				}
+			}
+		}
+	}
+
+	& img {
+		display: block;
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+		border-radius: 0;
+	}
+
+	& a {
+		color: var(--primary);
+	}
+
+	& :global(.contains-task-list) {
+		list-style-type: none;
+		padding-left: var(--gap-large);
+
+		& input[type="checkbox"]:disabled {
+			opacity: 1 !important;
+		}
+	}
+}
+
+/* Increasing specificity */
+.Cover.Cover {
+	width: 100%;
+	aspect-ratio: var(--comp-aspect-ratio, 1.91 / 1);
+	border-radius: var(--radius-medium);
+}

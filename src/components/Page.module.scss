@@ -1,0 +1,89 @@
+@use "../styles/queries";
+
+:global(main) {
+  scrollbar-gutter: stable both-edges;
+
+  @media not (prefers-reduced-motion: reduce) {
+    animation: slideFadeIn var(--duration-medium) var(--easing);
+  }
+}
+
+.Content {
+  width: 100%;
+  // TODO: Put these as a constant?
+  max-width: 44rem;
+  padding: var(--gap-very-large);
+
+  // Mobile will have larger padding so it isn't as close to screen edges
+  @media (max-width: queries.$mw-mobile) {
+    padding: var(--gap-large);
+  }
+
+  align-items: stretch;
+}
+
+.Section {
+  // TODO: Put these as a constant?
+  padding-block: min(4vh, var(--gap-very-large));
+}
+
+.R,
+.C {
+  display: flex;
+}
+
+.C {
+  flex-direction: column;
+}
+
+.W {
+  flex-wrap: wrap;
+}
+
+.F {
+  flex: 1;
+}
+
+.J {
+  justify-content: center;
+}
+
+.A {
+  align-items: center;
+}
+
+.Gxs {
+  gap: var(--gap-smaller);
+}
+
+.Gsm {
+  gap: var(--gap-small);
+}
+
+.Gmd {
+  gap: var(--gap-medium);
+}
+
+.Glg {
+  gap: var(--gap-large);
+}
+
+.Gxl {
+  gap: var(--gap-larger);
+}
+
+.Gxxl {
+  gap: var(--gap-very-large);
+}
+
+.Gxxxl {
+  gap: var(--gap-insanely-large);
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    // TODO: Put this as a constant?
+    transform: translateY(4rem);
+  }
+}

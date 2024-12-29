@@ -1,0 +1,15 @@
+.GradientText {
+	@media not (prefers-contrast: more) {
+		font-weight: var(--weight-bolder);
+		color: var(--neutral-highest);
+		background: var(--gradient);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+.TextChildrenCenter {
+	& > * {
+		text-align: center;
+	}
+}

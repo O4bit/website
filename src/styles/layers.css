@@ -1,0 +1,12 @@
+:root {
+	--layer-effect: 1;
+	--layer-content: 2;
+	--layer-nav: 3;
+	--layer-overlay: 4;
+}
+
+img,
+svg {
+	position: relative;
+	z-index: var(--layer-content);
+}

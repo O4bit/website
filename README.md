@@ -5,7 +5,7 @@ It's my website! I think having a website is cool, so I'm trying to make it real
 - 🖌️ Designed (with love and care) by [me](https://github.com/PalmDevs)
 - 🏗️ Built with [SolidJS](https://www.solidjs.com/) and [SolidStart](https://start.solidjs.com)
 - 🍞 Run by [Bun](https://bun.sh)
-- 🔷 Deployed using [Netlify](https://netlify.com) [![Netlify Status](https://api.netlify.com/api/v1/badges/62de1c9b-432f-4a1e-b0bb-4e32daec0516/deploy-status)](https://app.netlify.com/sites/palmdevs/deploys)
+- 🔷 Deployed using [Vercel](vercel.com)
 
 ## 👷 Developing
 

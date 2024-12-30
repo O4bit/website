@@ -1,9 +1,9 @@
-import { execSync } from 'child_process'
 import rehypeShiki from '@shikijs/rehype'
 import { transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers'
 import { transformerTwoslash } from '@shikijs/twoslash'
 import { defineConfig } from '@solidjs/start/config'
 import mdx from '@vinxi/plugin-mdx'
+import { execSync } from 'child_process'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import svgPlugin from 'vite-plugin-solid-svg'
@@ -31,6 +31,7 @@ export default defineConfig({
     vite: {
         build: {
             target: 'es2022',
+            outDir: 'dist',
         },
         css: {
             preprocessorOptions: {

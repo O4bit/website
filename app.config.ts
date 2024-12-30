@@ -31,8 +31,7 @@ export default defineConfig({
     vite: {
         build: {
             target: 'es2022',
-            outDir: 'dist',
-        },
+                },
         css: {
             preprocessorOptions: {
                 scss: {

@@ -1,37 +1,34 @@
-import rehypeShiki from '@shikijs/rehype'
-import { transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers'
-import { transformerTwoslash } from '@shikijs/twoslash'
-import { defineConfig } from '@solidjs/start/config'
-import mdx from '@vinxi/plugin-mdx'
-import { execSync } from 'child_process'
-import rehypeSlug from 'rehype-slug'
-import remarkGfm from 'remark-gfm'
-import svgPlugin from 'vite-plugin-solid-svg'
+import rehypeShiki from '@shikijs/rehype';
+import { transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers';
+import { transformerTwoslash } from '@shikijs/twoslash';
+import { defineConfig } from '@solidjs/start/config';
+import mdx from '@vinxi/plugin-mdx';
+import { execSync } from 'child_process';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
+import svgPlugin from 'vite-plugin-solid-svg';
 
-const defineString = (str?: string) => `"${str || 'unknown'}"`
+const defineString = (str?: string) => `"${str || 'unknown'}"`;
 
 export default defineConfig({
-    ssr: true,
+    ssr: true, // Enable server-side rendering for dynamic content
     server: {
         esbuild: {
             options: {
-                target: 'es2022',
+                target: 'es2022', // Modern JS target
             },
         },
-        preset: process.env.NITRO_PRESET ?? 'bun',
-        // Use this if you want everything to be completely static
-        // The site has theming based on events, so this will not be used unless you want to cause a theme flash
-        // Current code requires a rebuild to change event-based themes on the site:
-        // prerender: {
-        //     crawlLinks: true,
-        //     failOnError: true,
-        // },
+        preset: 'netlify', // Explicitly target Netlify for deployment
+        prerender: {
+            crawlLinks: true,
+            failOnError: true,
+        },
     },
     extensions: ['mdx'],
     vite: {
         build: {
             target: 'es2022',
-                },
+        },
         css: {
             preprocessorOptions: {
                 scss: {
@@ -75,4 +72,4 @@ export default defineConfig({
             ),
         },
     },
-})
+});

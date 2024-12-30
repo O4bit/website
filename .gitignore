@@ -26,3 +26,4 @@ gitignore
 .DS_Store
 Thumbs.db
 .vercel
+netlify.toml

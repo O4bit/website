@@ -12,7 +12,7 @@ import './app.scss'
 const App: Component = () => {
     onMount(() => {
         console.log(
-            "%c[App]\n%cHey there!\n%cAre you a developer looking to contribute to this website? Check out the source code!\nIf you're just exploring then that's fine. Have fun!",
+            "%c[App]\n%cHey there!\n%cnuh uh",
             'color: aquamarine; font-weight: bold;',
             'font-size: 2rem',
             'font-size: unset',

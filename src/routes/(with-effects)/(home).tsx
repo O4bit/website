@@ -26,8 +26,8 @@ export default (() => {
             <Title>Orbit (O4bit)</Title>
             <Meta
                 name="description"
-                content={`I'm a ${age}-year-old self-taught full-stack developer and a UI/UX designer. 
-                I make Back-end API and Software..`}
+                content={`I'm a {age}-year-old Back-end Developer and learning Software Developer. I make Back-end
+                        APIs and study about software development to make my own piece of great software one day.`}
             />
             <Meta property="og:image" content="/assets/og/ezgif-7-2eaf8a8b05.gif" />
             <Meta property="og:image:width" content="500" />

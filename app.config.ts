@@ -1,36 +1,34 @@
-import { execSync } from 'child_process'
-import rehypeShiki from '@shikijs/rehype'
-import { transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers'
-import { transformerTwoslash } from '@shikijs/twoslash'
-import { defineConfig } from '@solidjs/start/config'
-import mdx from '@vinxi/plugin-mdx'
-import rehypeSlug from 'rehype-slug'
-import remarkGfm from 'remark-gfm'
-import svgPlugin from 'vite-plugin-solid-svg'
+import rehypeShiki from '@shikijs/rehype';
+import { transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers';
+import { transformerTwoslash } from '@shikijs/twoslash';
+import { defineConfig } from '@solidjs/start/config';
+import mdx from '@vinxi/plugin-mdx';
+import { execSync } from 'child_process';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
+import svgPlugin from 'vite-plugin-solid-svg';
 
-const defineString = (str?: string) => `"${str || 'unknown'}"`
+const defineString = (str?: string) => `"${str || 'unknown'}"`;
 
 export default defineConfig({
     ssr: true,
     server: {
         esbuild: {
             options: {
-                target: 'es2022',
+                target: 'es2022', // Use modern JavaScript syntax
             },
         },
-        preset: process.env.NITRO_PRESET ?? 'bun',
-        // Use this if you want everything to be completely static
-        // The site has theming based on events, so this will not be used unless you want to cause a theme flash
-        // Current code requires a rebuild to change event-based themes on the site:
-        // prerender: {
-        //     crawlLinks: true,
-        //     failOnError: true,
-        // },
+        preset: process.env.NITRO_PRESET ?? 'netlify', // Use 'netlify' preset for deployment
     },
     extensions: ['mdx'],
     vite: {
         build: {
             target: 'es2022',
+            rollupOptions: {
+                output: {
+                    format: 'esm', // Explicitly set output format to 'esm' to support top-level await
+                },
+            },
         },
         css: {
             preprocessorOptions: {
@@ -75,4 +73,4 @@ export default defineConfig({
             ),
         },
     },
-})
+});

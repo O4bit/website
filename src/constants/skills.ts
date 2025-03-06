@@ -35,12 +35,7 @@ const Skills = [
         link: 'https://bun.sh',
     },
     {
-        name: 'C++',
-        icon: '/assets/images/skills/CPP.svg',
-        link: 'https://cplusplus.com',
-    },
-    {
-        name: 'C',
+        name: 'C(basic arduino)',
         icon: '/assets/images/skills/C.svg',
         link: 'https://cprogramming.com',
     },
@@ -73,12 +68,7 @@ const Skills = [
         name: 'Git',
         icon: '/assets/images/skills/git.svg',
         link: 'https://git-scm.com',
-    },
-    {
-        name: 'GitHub Actions',
-        icon: '/assets/images/skills/gha.svg',
-        link: 'https://github.com/features/actions',
-    },
+    }, 
 ] as const satisfies Array<{
     name: string
     icon: string

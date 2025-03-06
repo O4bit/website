@@ -10,14 +10,14 @@ const Projects = [
     },
     {
         name: 'P.U.L.S.E.D',
-        description: 'P.U.L.S.E.D is a software company that specializes in software development.',
+        description: 'P.U.L.S.E.D is a software company that specialises in software development.',
         image: '/assets/images/projects/logo.svg',
         href: 'https://pulsedinc.tech',
         hint: 'Visit website',
     },
     {
         name: 'StarAPI',
-        description: 'Server Status API comes with a silly discord bot.', 
+        description: 'StarAPI a big server monitoring project (WIP) ', 
         href: 'https://github.com/O4bit/StarAPI',
         image: '/assets/images/projects/nextstar.svg',
         hint: 'View repository',

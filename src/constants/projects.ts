@@ -10,7 +10,7 @@ const Projects = [
     },
     {
         name: 'P.U.L.S.E.D',
-        description: 'P.U.L.S.E.D is a software company that specialises in software development.',
+        description: 'P.U.L.S.E.D is my software company i release some stuff under.',
         image: '/assets/images/projects/logo.svg',
         href: 'https://pulsedinc.tech',
         hint: 'Visit website',

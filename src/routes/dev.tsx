@@ -1,3 +1,4 @@
+/*
 import { type Component, For, createSignal, useContext } from 'solid-js'
 import { createStore } from 'solid-js/store'
 import { Dynamic } from 'solid-js/web'
@@ -115,12 +116,12 @@ export default (() => {
                                                 href: '/',
                                                 icon: IconSource,
                                             },
-                                            {
+                                            /*{
                                                 name: 'Blog',
                                                 href: '/blog',
                                                 icon: IconSource,
-                                            },
-                                            {
+                                            },*/
+                                            /*{
                                                 name: 'Dev',
                                                 href: '/dev',
                                                 icon: IconSource,
@@ -212,7 +213,7 @@ export default (() => {
                                     <LinkCard
                                         name="Example card"
                                         description="This is an example card."
-                                        href="https://palmdevs.me"
+                                        href="https://o4bit.me"
                                         preview={() => (
                                             <div style="background-color: red; padding: 2rem">
                                                 Preview component area
@@ -228,3 +229,4 @@ export default (() => {
         </Dynamic>
     )
 }) satisfies Component
+/*

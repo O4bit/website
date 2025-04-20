@@ -1,4 +1,4 @@
-.Post {
+/*.Post {
 	width: 100%;
 
 	& :is(h1, h2, h3, h4, h5, h6) {
@@ -58,7 +58,7 @@
 			display: block;
 			counter-reset: line;
 			padding-block: var(--gap-medium);
-			/* This feels... cursed */
+			/* This feels... cursed */ /*
 			min-width: max-content;
 			width: 100%;
 
@@ -76,7 +76,7 @@
 				content: counter(line);
 				color: var(--neutral-lowest);
 				margin-right: var(--gap-large);
-				/* Expecting only two max digits */
+				/* Expecting only two max digits */ /*
 				min-width: 2ch;
 				text-align: right;
 			}
@@ -128,10 +128,11 @@
 		}
 	}
 }
-
+/*
 /* Increasing specificity */
-.Cover.Cover {
+/*.Cover.Cover {
 	width: 100%;
 	aspect-ratio: var(--comp-aspect-ratio, 1.91 / 1);
 	border-radius: var(--radius-medium);
-}
+}/*
+/*

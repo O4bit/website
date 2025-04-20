@@ -8,7 +8,7 @@ import { Button } from '../buttons/Button'
 
 import { Birthday, BirthdayLocale } from '~/constants/events'
 
-import IconBlog from '~/assets/icons/nav/blog.svg'
+//import IconBlog from '~/assets/icons/nav/blog.svg'
 import IconHome from '~/assets/icons/nav/home.svg'
 import IconSource from '~/assets/icons/source.svg'
 
@@ -69,7 +69,7 @@ const GlobalLayout: Component<{ children: JSX.Element }> = props => {
             <NavDock
                 pages={[
                     { name: 'Home', href: '/', icon: IconHome },
-                    { name: 'Blog', href: '/blog', icon: IconBlog, matchSubroutes: true },
+//                    { name: 'Blog', href: '/blog', icon: IconBlog, matchSubroutes: true },
                 ]}
                 links={[
                     {

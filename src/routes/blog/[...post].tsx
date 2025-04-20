@@ -1,4 +1,4 @@
-import { Meta, Title } from '@solidjs/meta'
+/*import { Meta, Title } from '@solidjs/meta'
 import { useParams } from '@solidjs/router'
 import { Show, Suspense, createResource, createSignal, lazy, onCleanup, onMount } from 'solid-js'
 import { MDXProvider } from 'solid-mdx'
@@ -45,7 +45,7 @@ export default () => {
 
                 return (
                     <BlogLayout>
-                        <Title>{`${info().title} • Palm (PalmDevs)`}</Title>
+                        <Title>{`${info().title} O4bit (Orbit)`}</Title>
                         <Meta name="description" content={info().description} />
                         <div class={styles.Post}>
                             <Column

@@ -17,7 +17,7 @@ const Projects = [
     },
     {
         name: 'StarAPI',
-        description: 'StarAPI a big server monitoring project (WIP) ', 
+        description: 'StarAPI is a api that integrates with a discord bot', 
         href: 'https://github.com/O4bit/StarAPI',
         image: '/assets/images/projects/nextstar.svg',
         hint: 'View repository',

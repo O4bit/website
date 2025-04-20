@@ -47,7 +47,7 @@ export default (() => {
                         <span aria-hidden="true">!</span>
                     </h1>
                     <p style="text-wrap: balance">
-                        I'm a {age}-year-old Back-end Developer and learning Software Developer. I make Back-end
+                        I'm a Back-end Developer and learning Software Developer. I make Back-end
                         APIs and study about software development to make my own piece of great software one day.
                     </p>
                 </Column>

@@ -17,7 +17,7 @@ const Socials = {
     },
     mail: {
         name: 'Email',
-        href: 'mailto:contact+web@deepspaceproductions.net',
+        href: 'mailto:contact+o4bit@protonmail.com',
         icon: IconEmail,
     },
 } as const satisfies Record<string, { name: string; href: string; icon: IconType }>

@@ -18,7 +18,7 @@ export default defineConfig({
                 target: 'es2022', // Use modern JavaScript syntax
             },
         },
-        preset: process.env.NITRO_PRESET ?? 'netlify', // Use 'netlify' preset for deployment
+        preset: process.env.NITRO_PRESET ?? 'vercel', // Use 'vercel' preset for deployment
     },
     extensions: ['mdx'],
     vite: {
@@ -66,10 +66,10 @@ export default defineConfig({
             svgPlugin({ defaultAsComponent: true }),
         ],
         define: {
-            __APP_COMMIT: defineString(process.env.COMMIT_REF ?? execSync('git rev-parse HEAD').toString().trim()),
-            __APP_DEPLOY_CONTEXT: defineString(process.env.CONTEXT ?? process.env.NODE_ENV),
+            __APP_COMMIT: defineString(process.env.VERCEL_GIT_COMMIT_SHA ?? process.env.COMMIT_REF ?? execSync('git rev-parse HEAD').toString().trim()),
+            __APP_DEPLOY_CONTEXT: defineString(process.env.VERCEL_ENV ?? process.env.CONTEXT ?? process.env.NODE_ENV),
             __APP_BRANCH: defineString(
-                process.env.BRANCH ?? execSync('git rev-parse --abbrev-ref HEAD').toString().trim(),
+                process.env.VERCEL_GIT_COMMIT_REF ?? process.env.BRANCH ?? execSync('git rev-parse --abbrev-ref HEAD').toString().trim(),
             ),
         },
     },

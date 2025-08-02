@@ -26,17 +26,23 @@ export default (() => {
             <Title>Orbit (O4bit)</Title>
             <Meta
                 name="description"
-                content={`I'm a Back-end Developer and a learning Software Developer. I make Back-end
-                        APIs and study about software development to make my own piece of great software one day.`}
+                content={`I'm a Back-end Developer and a learning Software Developer. I make Back-end APIs and study about software development to make my own piece of great software one day.`}
             />
-            <Meta property="og:image" content="/assets/og/ezgif-7-2eaf8a8b05.gif" />
+            <Meta property="og:image" content="/assets/og/image.webp" />
             <Meta property="og:image:width" content="500" />
             <Meta property="og:image:height" content="500" />
             <Meta property="og:image:type" content="image/webp" />
-            <Section constrainSize style="padding-block: min(8vh, var(--gap-insanely-large));">
+            <Section constrainSize style="padding-block: 0 min(8vh, var(--gap-insanely-large));">
+                <Tilting
+                    as="img"
+                    class={styles.Portrait}
+                    src="/assets/og/ezgif-7-2eaf8a8b05.gif"
+                    alt="Silly Astronaut guy :p"
+                    draggable="false"
+                />
                 <Column gap="none" class={sharedStyles.TextChildrenCenter}>
-                    <h1 aria-label="Hey there, I'm Orbit">
-                        <span aria-hidden="true">Hey there, I'm </span>
+                    <h1 aria-label="Whats up, I'm Orbit">
+                        <span aria-hidden="true">Whats up, I'm </span>
                         <span
                             aria-hidden="true"
                             style="font-weight: var(--weight-bolder)"
@@ -47,8 +53,7 @@ export default (() => {
                         <span aria-hidden="true">!</span>
                     </h1>
                     <p style="text-wrap: balance">
-                        I'm a Back-end Developer and learning Software Developer. I make Back-end
-                        APIs and study about software development to make my own piece of great software one day.
+                        I'm a Back-end Developer and learning Software Developer. I make Back-end APIs and study about software development to make my own piece of great software one day.
                     </p>
                 </Column>
                 <Row as="ul" data-no-marker="true" gap="md" centerHorizontal wrap aria-label="My socials">

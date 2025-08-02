@@ -33,13 +33,41 @@ export default (() => {
             <Meta property="og:image:height" content="500" />
             <Meta property="og:image:type" content="image/webp" />
             <Section constrainSize style="padding-block: 0 min(8vh, var(--gap-insanely-large));">
-                <Tilting
-                    as="img"
-                    class={styles.Portrait}
-                    src="/assets/og/ezgif-7-2eaf8a8b05.gif"
-                    alt="Silly Astronaut guy :p"
-                    draggable="false"
-                />
+                <div
+                    style={{
+                        display: 'block',
+                        'transform-style': 'preserve-3d',
+                        cursor: 'pointer',
+                        transition: 'transform 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.transition = 'transform 0.1s ease'
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.transition = 'transform 0.3s ease'
+                        e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)'
+                    }}
+                    onMouseMove={(e) => {
+                        const rect = e.currentTarget.getBoundingClientRect()
+                        const x = e.clientX - rect.left
+                        const y = e.clientY - rect.top
+                        const centerX = rect.width / 2
+                        const centerY = rect.height / 2
+                        const intensity = 15
+
+                        const rotateX = ((y - centerY) / centerY) * -intensity
+                        const rotateY = ((x - centerX) / centerX) * intensity
+
+                        e.currentTarget.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`
+                    }}
+                >
+                    <img
+                        class={styles.Portrait}
+                        src="/assets/og/ezgif-7-2eaf8a8b05.gif"
+                        alt="Silly Astronaut guy :p"
+                        draggable="false"
+                    />
+                </div>
                 <Column gap="none" class={sharedStyles.TextChildrenCenter}>
                     <h1 aria-label="Whats up, I'm Orbit">
                         <span aria-hidden="true">Whats up, I'm </span>

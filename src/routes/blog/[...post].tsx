@@ -94,3 +94,4 @@ const getPostInfo = async (post: Promise<Post>) => {
     const { default: _, ...rest } = await post
     return rest
 }
+*/

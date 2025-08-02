@@ -35,7 +35,9 @@ export default (() => {
             <Section constrainSize style="padding-block: 0 min(8vh, var(--gap-insanely-large));">
                 <div
                     style={{
-                        display: 'block',
+                        display: 'flex',
+                        'justify-content': 'center',
+                        'align-items': 'center',
                         'transform-style': 'preserve-3d',
                         cursor: 'pointer',
                         transition: 'transform 0.3s ease'
@@ -66,6 +68,7 @@ export default (() => {
                         src="/assets/og/ezgif-7-2eaf8a8b05.gif"
                         alt="Silly Astronaut guy :p"
                         draggable="false"
+                        style={{ 'border-radius': 'var(--radius-large, 16px)' }}
                     />
                 </div>
                 <Column gap="none" class={sharedStyles.TextChildrenCenter}>

@@ -60,7 +60,7 @@ const Skills = [
         link: 'https://docker.com',
     },
     {
-        name: 'Linux (Basics)',
+        name: 'Linux',
         icon: '/assets/images/skills/linux.webp',
         link: 'https://en.wikipedia.org/wiki/Linux',
     },
@@ -69,6 +69,12 @@ const Skills = [
         icon: '/assets/images/skills/git.svg',
         link: 'https://git-scm.com',
     }, 
+    {
+        name: 'Rust',
+        icon: '/assets/images/skills/rust.svg',
+        link: 'https://www.rust-lang.org/',
+    },
+
 ] as const satisfies Array<{
     name: string
     icon: string

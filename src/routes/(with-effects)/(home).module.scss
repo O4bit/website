@@ -2,31 +2,11 @@
 
 .ProjectsGrid {
   display: grid;
-  grid-template-columns: 1.5fr 0.75fr 0.25fr 1.5fr;
-  grid-template-rows: 1fr 0.25fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--gap-small);
-  grid-template-areas:
-    "a b b b"
-    "c c d d";
-
+  
   & > * {
     flex: 1;
-  }
-
-  & > :nth-child(4n + 1) {
-    grid-area: a;
-  }
-
-  & > :nth-child(4n + 2) {
-    grid-area: b;
-  }
-
-  & > :nth-child(4n + 3) {
-    grid-area: c;
-  }
-
-  & > :nth-child(4n + 4) {
-    grid-area: d;
   }
 
   @media (max-width: queries.$mw-mobile) {

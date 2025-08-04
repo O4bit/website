@@ -29,6 +29,15 @@ const Projects = [
         height: '131px',
     },
     {
+        name: 'Uptime-serve',
+        description: 'A uptime website for my projects and services.',
+        href: 'https://exo-net.o4bit.space',
+        image: '/assets/images/projects/uptime-serve.png',
+        hint: 'View website',
+        width: '130px',
+        height: '131px',    
+    },
+    {
         name: 'Other projects',
         description: 'My other projects and contributions are on GitHub.',
         href: 'https://github.com/O4bit',
@@ -36,16 +45,8 @@ const Projects = [
         hint: 'Explore more',
         width: '130px',
         height: '131px',    
-    },
-    {
-        name: 'Uptime-serve',
-        description: 'A uptime website for my projects and services.',
-        href: 'https://exo-net.o4bit.space',
-        image: '/assets/images/projects/uptime-serve.svg',
-        hint: 'View website',
-        width: '130px',
-        height: '131px',    
-    },
+    }
+    
 ] as const satisfies ProjectCardProps[]
 
 export default Projects

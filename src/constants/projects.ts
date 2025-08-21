@@ -39,7 +39,7 @@ const Projects = [
     },
     {
         name: 'Project Asteria',
-        description: '',
+        description: 'Discover space right from your phone with astronomy pictures with the Project Asteria app.',
         href: 'https://github.com/O4bit/project-asteria',
         image: '/assets/images/projects/project-asteria.png',
         hint: 'View website',

@@ -108,7 +108,7 @@ export default (() => {
                     <span>Projects</span>
                     <span aria-hidden="true">&gt;</span>
                 </h2>
-                <ul data-no-marker="true" class={styles.ProjectsGrid}>
+                <ul data-no-marker="true" class={`${styles.ProjectsGrid} ${styles.Mosaic}`}>
                     <For each={Projects}>
                         {project => (
                             <li>

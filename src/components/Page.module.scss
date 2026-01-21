@@ -15,11 +15,11 @@
   padding: var(--gap-very-large);
 
   // Mobile will have larger padding so it isn't as close to screen edges
+  align-items: stretch;
+
   @media (max-width: queries.$mw-mobile) {
     padding: var(--gap-large);
   }
-
-  align-items: stretch;
 }
 
 .Section {

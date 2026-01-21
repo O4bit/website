@@ -38,31 +38,38 @@ export default defineConfig({
             },
         },
         plugins: [
-            mdx.default.withImports({})({
-                jsx: true,
-                jsxImportSource: 'solid-js',
-                providerImportSource: 'solid-mdx',
-                remarkPlugins: [remarkGfm],
-                rehypePlugins: [
-                    rehypeSlug,
-                    [
-                        rehypeShiki,
-                        {
-                            themes: {
-                                dark: 'ayu-dark',
-                                light: 'github-light',
+            ((m: any) => {
+                const withImports = m?.default?.withImports ?? m?.withImports
+                const opts = {
+                    jsx: true,
+                    jsxImportSource: 'solid-js',
+                    providerImportSource: 'solid-mdx',
+                    remarkPlugins: [remarkGfm],
+                    rehypePlugins: [
+                        rehypeSlug,
+                        [
+                            rehypeShiki,
+                            {
+                                themes: {
+                                    dark: 'ayu-dark',
+                                    light: 'github-light',
+                                },
+                                transformers: [
+                                    transformerNotationHighlight(),
+                                    transformerNotationWordHighlight(),
+                                    transformerTwoslash({
+                                        explicitTrigger: true,
+                                    }),
+                                ],
                             },
-                            transformers: [
-                                transformerNotationHighlight(),
-                                transformerNotationWordHighlight(),
-                                transformerTwoslash({
-                                    explicitTrigger: true,
-                                }),
-                            ],
-                        },
+                        ],
                     ],
-                ],
-            }),
+                }
+
+                if (withImports) return withImports({})(opts)
+                // fallback: assume default export is a function that accepts options directly
+                return m(opts)
+            })(mdx),
             svgPlugin({ defaultAsComponent: true }),
         ],
         define: {

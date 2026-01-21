@@ -98,6 +98,12 @@
       height: var(--size-relative-medium);
       object-fit: contain;
     }
+
+    /* Larger Kotlin icon for better visibility */
+    & > .SkillIcon[src$="kotlin.png"] {
+      width: calc(var(--size-relative-medium) * 1.0);
+      height: calc(var(--size-relative-medium) * 1.0);
+    }
   }
 }
 

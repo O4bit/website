@@ -4,6 +4,7 @@ import { format } from 'timeago.js'
 
 import BottomBanner from '../BottomBanner'
 import NavDock from '../NavDock'
+import StarryNight from '../effects/StarryNight'
 import { Button } from '../buttons/Button'
 
 import { Birthday, BirthdayLocale } from '~/constants/events'
@@ -66,6 +67,7 @@ const GlobalLayout: Component<{ children: JSX.Element }> = props => {
                 ref={canvasRef}
                 style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: var(--layer-overlay);"
             />
+            <StarryNight />
             <NavDock
                 pages={[
                     { name: 'Home', href: '/', icon: IconHome },

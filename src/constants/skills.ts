@@ -75,6 +75,17 @@ const Skills = [
         link: 'https://www.rust-lang.org/',
     },
 
+    {
+        name: 'Kotlin',
+        icon: '/assets/images/skills/kotlin.png',
+        link: 'https://kotlinlang.org',
+    },
+    {
+        name: 'Jetpack Compose',
+        icon: '/assets/images/skills/jetpack-compose.png',
+        link: 'https://developer.android.com/jetpack/compose',
+    },
+
 ] as const satisfies Array<{
     name: string
     icon: string

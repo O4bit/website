@@ -29,15 +29,6 @@ const Projects = [
         height: '131px',
     },
     {
-        name: 'Uptime-serve',
-        description: 'A uptime website for my projects and services.',
-        href: 'https://exo-net.o4bit.space',
-        image: '/assets/images/projects/uptime-serve.png',
-        hint: 'View website',
-        width: '130px',
-        height: '131px',    
-    },
-    {
         name: 'Project Asteria',
         description: 'Discover space right from your phone with astronomy pictures with the Project Asteria app.',
         href: 'https://github.com/O4bit/project-asteria',

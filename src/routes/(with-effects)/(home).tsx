@@ -26,7 +26,7 @@ export default (() => {
             <Title>Orbit (O4bit)</Title>
             <Meta
                 name="description"
-                content={`I'm Orbit, a ${age}-year-old Backend Developer and Software Developer. I handle everything from APIs to databases and much more.`}
+                content={`I'm Orbit, a Backend Developer and Software Developer. I handle everything from APIs to databases and much more.`}
             />
             <Meta property="og:image" content="/assets/og/image.webp" />
             <Meta property="og:image:width" content="500" />
@@ -84,7 +84,7 @@ export default (() => {
                         <span aria-hidden="true">!</span>
                     </h1>
                     <p style="text-wrap: balance">
-                        I'm a Back-end Developer and learning Software Developer. I make Back-end APIs and study about software development to make my own piece of great software one day.
+                        I'm Orbit, a Backend Developer and Software Developer. I handle everything from APIs to databases and much more.
                     </p>
                 </Column>
                 <Row as="ul" data-no-marker="true" gap="md" centerHorizontal wrap aria-label="My socials">

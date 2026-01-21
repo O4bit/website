@@ -33,7 +33,7 @@
     "remark-gfm": "^4.0.0",
     "sass": "^1.79.5",
     "solid-mdx": "^0.0.7",
-    "vinxi": "^0.4.3",
+    "vinxi": "^0.5.7",
     "vite-plugin-solid-svg": "^0.8.1"
   },
   "trustedDependencies": [

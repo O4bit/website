@@ -1,3 +1,4 @@
+import IconBluesky from '~/assets/icons/bluesky.svg'
 import IconDiscord from '~/assets/icons/discord.svg'
 import IconGitHub from '~/assets/icons/github.svg'
 import IconEmail from '~/assets/icons/mail.svg'
@@ -9,6 +10,11 @@ const Socials = {
         name: 'GitHub',
         href: 'https://github.com/O4bit',
         icon: IconGitHub,
+    },
+    bluesky: {
+        name: 'Bluesky',
+        href: 'https://bsky.app/profile/o4bit.space',
+        icon: IconBluesky,
     },
     discord: {
         name: 'Discord',

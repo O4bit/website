@@ -11,10 +11,10 @@ const Projects = [
         height: '131px',
     },
     {
-        name: 'P.U.L.S.E.D',
-        description: 'P.U.L.S.E.D founded by myself is a company I created to develop various software solutions.',
+        name: 'Vertronix',
+        description: 'Vertronix is a company I created to develop various software solutions.',
         image: '/assets/images/projects/pulsedlogo.svg',
-        href: 'https://pulsedinc.tech',
+        href: 'https://vertronix.tech',
         hint: 'Visit website',
         width: '130px',
         height: '131px',

@@ -14,6 +14,7 @@
 	line-height: inherit;
 
 	& .Icon {
+		display: block;
 		fill: currentColor;
 		width: var(--comp-el-size);
 		height: var(--comp-el-size);

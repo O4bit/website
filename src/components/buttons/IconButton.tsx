@@ -33,7 +33,9 @@ const LinkIconButton: Component<LinkIconButtonProps> = props => {
             rel={undefinedIf(props.openInCurrentTab, 'noreferrer')}
             {...transformProps(props)}
         >
-            <props.icon aria-hidden="true" class={styles.Icon} />
+            <span>
+                <props.icon aria-hidden="true" class={styles.Icon} />
+            </span>
         </Touchable>
     )
 }

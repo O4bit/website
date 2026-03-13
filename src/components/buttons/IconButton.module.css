@@ -21,6 +21,10 @@
 	}
 
 	& span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: var(--comp-el-size);
 		height: var(--comp-el-size);
 	}
 

@@ -8,10 +8,10 @@
 
 	transition: var(--duration-medium) var(--easing-quick);
 	/* Weird flashing fix for <a> tags, user agent stylesheet issue */
-	transition-property: opacity, transform, filter, text-decoration,
+	transition-property: opacity, filter, text-decoration,
 		outline-color, background-color;
 
-	line-height: inherit;
+	line-height: 0;
 
 	& .Icon {
 		display: block;
@@ -26,6 +26,7 @@
 		justify-content: center;
 		width: var(--comp-el-size);
 		height: var(--comp-el-size);
+		line-height: 0;
 	}
 
 	&:not([aria-disabled="true"], :disabled) {
@@ -34,7 +35,7 @@
 		}
 
 		&:focus-visible {
-			transform: translateY(-0.3rem);
+			transform: none;
 		}
 	}
 }

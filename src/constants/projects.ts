@@ -31,7 +31,7 @@ const Projects = [
         name: 'Project Asteria',
         description: 'Discover space right from your phone with astronomy pictures with the Project Asteria app.',
         href: 'https://github.com/O4bit/project-asteria',
-        image: '/assets/images/projects/project-asteria.png',
+        image: '/assets/images/projects/ic_launcher-playstore.png',
         hint: 'View website',
         width: '130px',
         height: '131px',    

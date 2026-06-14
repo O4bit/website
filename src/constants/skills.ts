@@ -1,5 +1,15 @@
 const Skills = [
     {
+        name: 'Kotlin',
+        icon: '/assets/images/skills/kotlin.png',
+        link: 'https://kotlinlang.org',
+    },
+    {
+        name: 'Rust',
+        icon: '/assets/images/skills/rust.svg',
+        link: 'https://www.rust-lang.org/',
+    },
+    {
         name: 'HTML',
         icon: '/assets/images/skills/html.svg',
         link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
@@ -8,11 +18,6 @@ const Skills = [
         name: 'CSS',
         icon: '/assets/images/skills/css.svg',
         link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-    },
-    {
-        name: 'JavaScript',
-        icon: '/assets/images/skills/js.svg',
-        link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
     },
     {
         name: 'TypeScript',
@@ -25,60 +30,9 @@ const Skills = [
         link: 'https://solidjs.com',
     },
     {
-        name: 'Node.js',
-        icon: '/assets/images/skills/nodejs.svg',
-        link: 'https://nodejs.org',
-    },
-    {
-        name: 'Bun',
-        icon: '/assets/images/skills/bun.svg',
-        link: 'https://bun.sh',
-    },
-    {
-        name: 'C(basic arduino)',
-        icon: '/assets/images/skills/C.svg',
-        link: 'https://cprogramming.com',
-    },
-    {
-        name: 'Cloudflare',
+        name: 'Cf Workers',
         icon: '/assets/images/skills/Cloudflare-Dark.svg',
         link: 'https://cloudflare.com',
-    },
-    {
-        name: 'Nginx',
-        icon: '/assets/images/skills/Nginx.svg',
-        link: 'https://nginx.org',
-    },
-    {
-        name: 'Vercel',
-        icon: '/assets/images/skills/Vercel-Dark.svg',
-        link: 'https://vercel.com',
-    },
-    {
-        name: 'Docker',
-        icon: '/assets/images/skills/docker.svg',
-        link: 'https://docker.com',
-    },
-    {
-        name: 'Linux',
-        icon: '/assets/images/skills/linux.webp',
-        link: 'https://en.wikipedia.org/wiki/Linux',
-    },
-    {
-        name: 'Git',
-        icon: '/assets/images/skills/git.svg',
-        link: 'https://git-scm.com',
-    }, 
-    {
-        name: 'Rust',
-        icon: '/assets/images/skills/rust.svg',
-        link: 'https://www.rust-lang.org/',
-    },
-
-    {
-        name: 'Kotlin',
-        icon: '/assets/images/skills/kotlin.png',
-        link: 'https://kotlinlang.org',
     },
     {
         name: 'Jetpack Compose',

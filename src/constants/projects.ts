@@ -14,7 +14,7 @@ const Projects = [
         name: 'Vertronix (SOON!',
         description: 'SOON! (logo is not final)',
         image: '/assets/images/projects/pulsedlogo.svg',
-        href: '/',
+        href: 'https://github.com/Vertronix-systems',
         width: '130px',
         height: '131px',
     },

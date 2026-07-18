@@ -14,7 +14,7 @@
   height: 200%;
   user-select: none;
   pointer-events: none;
-  opacity: 0.25;
+  opacity: 0.4;
   z-index: var(--layer-effect);
   transition: opacity 5s, top 1.5s var(--easing);
 
@@ -27,7 +27,7 @@
   }
 
   @media (max-width: queries.$mw-mobile) {
-    opacity: 0.35;
+    opacity: 0.5;
 
     & > .Orb {
       width: 45vmax;

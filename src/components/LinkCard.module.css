@@ -3,7 +3,7 @@
 	height: 100%;
 
 	overflow: hidden;
-	background-color: var(--surface-low);
+	background-color: var(--surface-low-high-opacity, var(--surface-low));
 	outline: var(--line-style) var(--surface-medium);
 	outline-offset: -2px;
 	border-radius: var(--radius-larger);
@@ -11,11 +11,14 @@
 	text-decoration: none;
 	z-index: var(--layer-container);
 
+	-webkit-backdrop-filter: blur(12px) saturate(140%);
+	backdrop-filter: blur(12px) saturate(140%);
+
 	transition: var(--duration-longer) var(--easing);
-	transition-property: background-color, transform, outline-color;
+	transition-property: background-color, transform, outline-color, backdrop-filter;
 
 	&:where(:hover, :focus-visible) {
-		background-color: var(--surface-medium);
+		background-color: var(--surface-medium-high-opacity, var(--surface-medium));
 		outline-color: var(--surface-high);
 	}
 }

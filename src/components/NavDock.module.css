@@ -28,32 +28,26 @@
 	}
 
 	&[data-scrolled="true"] {
-		background-color: var(--surface-low);
+		background-color: var(--surface-low-high-opacity, var(--surface-low));
 		outline-color: var(--surface-medium);
+		transition-property: background-color, outline-color, backdrop-filter,
+			-webkit-backdrop-filter;
 
-		& .Highlight {
-			background-color: var(--surface-high);
+		[data-theme="dark"] & {
+			-webkit-backdrop-filter: blur(16px) saturate(160%) brightness(55%);
+			backdrop-filter: blur(16px) saturate(160%) brightness(55%);
 		}
 
-		/* biome-ignore lint/correctness/noUnknownMediaFeatureName: How is this not known? */
-		@media not print and (prefers-contrast: more) and (
-				prefers-reduced-transparency: reduce
-			) and (prefers-reduced-motion: reduce) {
-			transition-property: background-color, outline-color, backdrop-filter,
-				-webkit-backdrop-filter;
-			background-color: var(--surface-low-high-opacity, var(--surface-low));
+		[data-theme="light"] & {
+			-webkit-backdrop-filter: blur(16px) saturate(180%) brightness(88%);
+			backdrop-filter: blur(16px) saturate(180%) brightness(88%);
+		}
 
-			[data-theme="dark"] & {
-				-webkit-backdrop-filter: blur(var(--gap-medium)) brightness(60%);
-				backdrop-filter: blur(var(--gap-medium)) brightness(60%);
-			}
-
-			& .Highlight {
-				background-color: var(
-					--surface-medium-high-opacity,
-					var(--surface-medium)
-				);
-			}
+		& .Highlight {
+			background-color: var(
+				--surface-medium-high-opacity,
+				var(--surface-medium)
+			);
 		}
 	}
 }

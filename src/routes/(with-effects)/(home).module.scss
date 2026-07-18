@@ -78,18 +78,21 @@
   & > .SkillContainer {
     --interaction-glow: var(--surface-highest);
 
-    background-color: var(--surface-low);
+    background-color: var(--surface-low-high-opacity, var(--surface-low));
     color: var(--neutral-high);
     border-radius: var(--radius-medium);
     padding: var(--gap-small);
     outline: var(--line-style) var(--surface-medium);
+
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    backdrop-filter: blur(10px) saturate(140%);
 
     text-decoration: none;
     white-space: nowrap;
     justify-content: center;
 
     &:where(:hover, :focus-visible) {
-      background-color: var(--surface-medium);
+      background-color: var(--surface-medium-high-opacity, var(--surface-medium));
       outline-color: var(--surface-high);
     }
 

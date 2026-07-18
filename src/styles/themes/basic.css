@@ -27,8 +27,8 @@
 	--surface-medium-full-opacity: var(--surface-medium);
 	--surface-low-full-opacity: var(--surface-low);
 
-	--surface-medium-high-opacity: var(--surface-medium);
-	--surface-low-high-opacity: var(--surface-low);
+	--surface-medium-high-opacity: hsla(210, 30%, 85%, 0.7);
+	--surface-low-high-opacity: hsla(210, 35%, 92%, 0.6);
 
 	--primary: #6917a0;
 	--on-primary: #ebf9ff;

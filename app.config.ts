@@ -22,6 +22,12 @@ export default defineConfig({
     },
     extensions: ['mdx'],
     vite: {
+        ssr: {
+            resolve: {
+                conditions: ['solid', 'node', 'import', 'require'],
+                externalConditions: ['solid'],
+            },
+        },
         build: {
             target: 'es2022',
             rollupOptions: {

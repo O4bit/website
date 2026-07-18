@@ -2,6 +2,7 @@ import IconBluesky from '~/assets/icons/bluesky.svg'
 import IconDiscord from '~/assets/icons/discord.svg'
 import IconGitHub from '~/assets/icons/github.svg'
 import IconEmail from '~/assets/icons/mail.svg'
+import IconLastfm from '~/assets/icons/lastfm.svg'
 
 import type { IconType } from '~/components'
 
@@ -20,6 +21,11 @@ const Socials = {
         name: 'Discord',
         href: 'https://discord.com/users/719923357046538243',
         icon: IconDiscord,
+    },
+    lastfm: {
+        name: 'Last.fm',
+        href: 'https://www.last.fm/user/o4bit',
+        icon: IconLastfm,
     },
     mail: {
         name: 'Email',

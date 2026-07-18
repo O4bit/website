@@ -1,6 +1,5 @@
 import rehypeShiki from '@shikijs/rehype';
 import { transformerNotationHighlight, transformerNotationWordHighlight } from '@shikijs/transformers';
-import { transformerTwoslash } from '@shikijs/twoslash';
 import { defineConfig } from '@solidjs/start/config';
 import mdx from '@vinxi/plugin-mdx';
 import { execSync } from 'child_process';
@@ -63,9 +62,6 @@ export default defineConfig({
                                 transformers: [
                                     transformerNotationHighlight(),
                                     transformerNotationWordHighlight(),
-                                    transformerTwoslash({
-                                        explicitTrigger: true,
-                                    }),
                                 ],
                             },
                         ],

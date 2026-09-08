@@ -1,8 +1,10 @@
 :root {
+	--layer-background: 0;
 	--layer-effect: 1;
-	--layer-content: 2;
-	--layer-nav: 3;
-	--layer-overlay: 4;
+	--layer-scrim: 2;
+	--layer-content: 3;
+	--layer-nav: 10;
+	--layer-overlay: 20;
 }
 
 img,

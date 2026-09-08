@@ -1,0 +1,18 @@
+diff --git a/esm/index.js b/esm/index.js
+index b825a07..8f7004f 100644
+--- a/esm/index.js
++++ b/esm/index.js
+@@ -10,4 +10,3 @@
+ export { format } from './format';
+ export { render, cancel } from './realtime';
+ export { register };
+-//# sourceMappingURL=index.js.map
+diff --git a/lib/index.js b/lib/index.js
+index b825a07..8f7004f 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -18,4 +18,3 @@
+ var realtime_1 = require("./realtime");
+ exports.render = realtime_1.render;
+ exports.cancel = realtime_1.cancel;
+-//# sourceMappingURL=index.js.map

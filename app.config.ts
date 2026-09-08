@@ -7,6 +7,31 @@ import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import svgPlugin from 'vite-plugin-solid-svg';
 
+import { createLogger } from 'vite';
+
+const customLogger = createLogger();
+const originalWarn = customLogger.warn;
+customLogger.warn = (msg, options) => {
+    if (
+        msg.includes('missing source files') ||
+        msg.includes('legacy-js-api') ||
+        msg.includes('Dart Sass')
+    ) {
+        return;
+    }
+    originalWarn(msg, options);
+};
+
+// Filter out legacy Dart Sass deprecation noise printed directly to stderr
+const origStderrWrite = process.stderr.write.bind(process.stderr);
+(process.stderr as any).write = (chunk: any, ...args: any[]) => {
+    const str = typeof chunk === 'string' ? chunk : chunk?.toString?.() || '';
+    if (str.includes('legacy-js-api') || str.includes('Dart Sass 2.0.0')) {
+        return true;
+    }
+    return (origStderrWrite as any)(chunk, ...args);
+};
+
 const defineString = (str?: string) => `"${str || 'unknown'}"`;
 
 export default defineConfig({
@@ -21,6 +46,7 @@ export default defineConfig({
     },
     extensions: ['mdx'],
     vite: {
+        customLogger,
         ssr: {
             resolve: {
                 conditions: ['solid', 'node', 'import', 'require'],
@@ -33,12 +59,29 @@ export default defineConfig({
                 output: {
                     format: 'esm', // Explicitly set output format to 'esm' to support top-level await
                 },
+                onwarn(warning, defaultHandler) {
+                    if (
+                        warning.code === 'SOURCEMAP_BROKEN' ||
+                        warning.message?.includes('missing source files') ||
+                        warning.message?.includes('Dart Sass')
+                    ) {
+                        return;
+                    }
+                    defaultHandler(warning);
+                },
             },
         },
         css: {
             preprocessorOptions: {
                 scss: {
-                    api: 'modern',
+                    api: 'modern-compiler',
+                    silenceDeprecations: ['legacy-js-api'],
+                    quietDeps: true,
+                },
+                sass: {
+                    api: 'modern-compiler',
+                    silenceDeprecations: ['legacy-js-api'],
+                    quietDeps: true,
                 },
             },
         },

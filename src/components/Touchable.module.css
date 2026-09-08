@@ -13,12 +13,12 @@
 		transform: unset;
 	}
 
+	overflow: hidden;
+
 	&::before {
 		content: "";
-		inset: 0;
 		position: absolute;
-		height: 100%;
-		width: 100%;
+		inset: 0;
 
 		transition: opacity var(--duration-short);
 

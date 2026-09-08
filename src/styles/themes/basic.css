@@ -1,85 +1,113 @@
 :root,
 :root[data-theme="light"] {
-	--bg: #f4f9ff;
+	--bg: #faf7ff;
+	--bg-orb: radial-gradient(
+		circle at 50% 50%,
+		rgba(147, 51, 234, 0.10) 0%,
+		rgba(192, 132, 252, 0.05) 45%,
+		rgba(216, 180, 254, 0) 70%
+	);
 
 	--gradient: linear-gradient(
-		230deg,
-		var(--gradient-primary) 25%,
-		var(--gradient-secondary) 70.95%
+		135deg,
+		var(--gradient-primary) 10%,
+		var(--gradient-secondary) 85%
 	);
-	--gradient-primary: #6f29a8;
-	--gradient-secondary: #8900fa;
+	--gradient-primary: #6750a4;
+	--gradient-secondary: #9333ea;
 
-	--neutral-highest: #000000;
-	--neutral-high: #020101;
-	--neutral-medium: #000000;
-	--neutral-lowest: #566472;
+	--neutral-highest: #1d192b;
+	--neutral-high: #322f37;
+	--neutral-medium: #49454e;
+	--neutral-lowest: #79747e;
 
-	--neutral-variant-high: #3c008b;
-	--neutral-variant-low: #39485c;
+	--neutral-variant-high: #49454f;
+	--neutral-variant-low: #79747e;
 
-	--surface-highest: #c2ced6;
-	--surface-high: #d1d6df;
-	--surface-medium: #e1e7f2;
-	--surface-low: #f2f7ff;
+	--surface-lowest: #ffffff;
+	--surface-low: #f5eff9;
+	--surface-medium: #eee7f3;
+	--surface-high: #e7e0ed;
+	--surface-highest: #dfd8e5;
 
 	--surface-high-full-opacity: var(--surface-high);
 	--surface-medium-full-opacity: var(--surface-medium);
 	--surface-low-full-opacity: var(--surface-low);
 
-	--surface-medium-high-opacity: hsla(210, 30%, 85%, 0.7);
-	--surface-low-high-opacity: hsla(210, 35%, 92%, 0.6);
+	--surface-medium-high-opacity: hsla(270, 28%, 92%, 0.78);
+	--surface-low-high-opacity: hsla(270, 32%, 96%, 0.72);
 
-	--primary: #6917a0;
-	--on-primary: #ebf9ff;
+	--primary: #6750a4;
+	--on-primary: #ffffff;
+	--primary-container: #eaddff;
+	--on-primary-container: #21005d;
 
-	--secondary: #000000;
-	--on-secondary: #dddddd;
+	--secondary: #e8def8;
+	--on-secondary: #1d192b;
 
-	--tertiary: #3c444e;
+	--tertiary: #7d5260;
+	--on-tertiary: #ffffff;
 
-	--interaction-glow: rgba(0, 0, 0, 0.075);
+	--outline: rgba(103, 80, 164, 0.18);
+	--outline-variant: rgba(103, 80, 164, 0.08);
+
+	--interaction-glow: rgba(103, 80, 164, 0.12);
 }
 
 :root[data-theme="dark"] {
-	--bg: #0e1114;
+	--bg: #0c0a10;
 	--bg-orb: radial-gradient(
 		circle at 50% 50%,
-		rgba(0, 194, 255, 0.07) 0%,
-		rgba(0, 212, 173, 0.03) 45%,
-		rgba(1, 255, 157, 0) 70%
+		rgba(168, 85, 247, 0.22) 0%,
+		rgba(139, 92, 246, 0.12) 40%,
+		rgba(109, 40, 217, 0.0) 70%
 	);
 
-	--gradient-primary: #521e8d;
-	--gradient-secondary: #591388;
+	--gradient: linear-gradient(
+		135deg,
+		#f5f0ff 0%,
+		var(--gradient-primary) 40%,
+		var(--gradient-secondary) 100%
+	);
+	--gradient-primary: #d0bcff;
+	--gradient-secondary: #a855f7;
 
-	--neutral-highest: #ffffff;
-	--neutral-high: #dddddd;
-	--neutral-medium: #cccccc;
-	--neutral-lowest: #7f8b96;
+	--neutral-highest: #fdf8ff;
+	--neutral-high: #e9e0eb;
+	--neutral-medium: #cbc3cf;
+	--neutral-lowest: #948e99;
 
-	--neutral-variant-high: #81b0c3;
-	--neutral-variant-low: #9da8ac;
+	--neutral-variant-high: #d0c2d4;
+	--neutral-variant-low: #7d7482;
 
-	--surface-high-full-opacity: hsla(204, 14%, 15%, 1);
-	--surface-medium-full-opacity: hsla(204, 14%, 13%, 1);
-	--surface-low-full-opacity: hsla(204, 14%, 11%, 1);
+	--surface-lowest: #0c0a10;
+	--surface-low-full-opacity: #171321;
+	--surface-medium-full-opacity: #211b2e;
+	--surface-high-full-opacity: #2c243c;
+	--surface-highest-full-opacity: #372d49;
 
-	--surface-medium-high-opacity: hsla(220, 23%, 19%, 0.65);
-	--surface-low-high-opacity: hsla(220, 20%, 15%, 0.65);
+	--surface-low-high-opacity: hsla(268, 28%, 12%, 0.72);
+	--surface-medium-high-opacity: hsla(268, 26%, 17%, 0.76);
 
-	--surface-highest: hsla(216, 20%, 34%, 0.15);
-	--surface-high: hsla(216, 18%, 32%, 0.15);
-	--surface-medium: hsla(220, 23%, 28%, 0.15);
-	--surface-low: hsla(220, 20%, 24%, 0.15);
+	--surface-low: hsla(268, 28%, 14%, 0.45);
+	--surface-medium: hsla(268, 26%, 19%, 0.55);
+	--surface-high: hsla(268, 24%, 25%, 0.65);
+	--surface-highest: hsla(268, 22%, 32%, 0.75);
 
-	--primary: #522577;
-	--on-primary: #003247;
+	/* Material 3 Purple Expressive Tokens */
+	--primary: #d0bcff;
+	--on-primary: #381e72;
+	--primary-container: #4f378b;
+	--on-primary-container: #eaddff;
 
-	--secondary: #160d1d;
-	--on-secondary: #eeeeee;
+	--secondary: #261e32;
+	--on-secondary: #e8def8;
 
-	--tertiary: #000000;
+	--tertiary: #efb8c8;
+	--on-tertiary: #492532;
 
-	--interaction-glow: rgba(255, 255, 255, 0.025);
+	--outline: rgba(208, 188, 255, 0.16);
+	--outline-variant: rgba(208, 188, 255, 0.08);
+
+	--interaction-glow: rgba(168, 85, 247, 0.16);
 }

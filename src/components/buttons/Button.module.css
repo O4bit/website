@@ -1,8 +1,8 @@
 .Base {
 	min-width: fit-content;
 	text-align: center;
-	padding: var(--gap-small) var(--gap-small);
-	border-radius: var(--radius-medium);
+	padding: var(--gap-small) var(--gap-medium);
+	border-radius: var(--radius-full);
 	user-select: none;
 
 	background-color: var(--comp-bg);
@@ -10,7 +10,7 @@
 
 	transition: var(--duration-medium) var(--easing-quick);
 	/* Weird flashing fix for <a> tags, user agent stylesheet issue */
-	transition-property: opacity, transform, filter, text-decoration;
+	transition-property: opacity, transform, filter, text-decoration, box-shadow;
 
 	font-size: var(--text-label);
 	font-weight: var(--weight-label);
@@ -18,11 +18,13 @@
 
 	&:not([aria-disabled="true"], :disabled) {
 		&:hover {
-			opacity: 0.85;
+			opacity: 0.92;
+			transform: translateY(-1px);
+			box-shadow: 0 4px 16px -2px var(--interaction-glow);
 		}
 
 		&:focus-visible {
-			transform: translateY(-0.3rem);
+			transform: translateY(-0.2rem);
 		}
 	}
 

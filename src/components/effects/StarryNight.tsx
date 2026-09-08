@@ -18,39 +18,39 @@ const css = `
   pointer-events: none;
 }
 .static-star {
-  opacity: 0.8;
-  filter: brightness(1);
+  opacity: 0.5;
+  filter: brightness(0.9);
 }
 .flickering-star {
-  opacity: 1;
-  filter: brightness(1.7) drop-shadow(0 0 6px var(--sn-star-color, #fff));
-  animation: white-to-gray-flicker 2s ease-in-out infinite;
+  opacity: 0.9;
+  filter: brightness(1.4) drop-shadow(0 0 4px var(--sn-star-color, #d8b4fe));
+  animation: white-to-gray-flicker 2.5s ease-in-out infinite;
 }
 
 @keyframes white-to-gray-flicker {
-  0% { background: #ffffff; opacity: 1; box-shadow: 0 0 6px rgba(255,255,255,0.9); }
-  50% { background: #888888; opacity: 0.4; box-shadow: 0 0 3px rgba(136,136,136,0.4); }
-  100% { background: #ffffff; opacity: 1; box-shadow: 0 0 6px rgba(255,255,255,0.9); }
+  0% { opacity: 0.85; box-shadow: 0 0 4px rgba(216,180,254,0.8); }
+  50% { opacity: 0.25; box-shadow: 0 0 2px rgba(168,85,247,0.3); }
+  100% { opacity: 0.85; box-shadow: 0 0 4px rgba(216,180,254,0.8); }
 }
 
-/* container positioning helper */
-#starrynight-stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3; }
+/* container positioning helper - strictly background layer */
+#starrynight-stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: var(--layer-effect, 1); }
 
-/* Meteors (shooting stars) */
-.starrynight-meteors { position: absolute; top: 0; left: 0; width: 100%; height: 100vh; pointer-events: none; z-index: 2; overflow: hidden; }
-.starrynight-meteors span { position: absolute; top: 50%; left: 50%; width: 4px; height: 4px; background: var(--sn-meteor-color, #fff); border-radius: 50%; box-shadow: 0 0 0 4px var(--sn-star-glow, rgba(255,255,255,0.1)),0 0 0 8px var(--sn-star-glow, rgba(255,255,255,0.1)),0 0 20px var(--sn-star-glow, rgba(255,255,255,0.1)); animation: animate 3s linear infinite; }
-.starrynight-meteors span::before { content: ""; position: absolute; top: 50%; transform: translateY(-50%); width: 300px; height: 1px; background: linear-gradient(90deg,var(--sn-star-trail-color,#fff),transparent); }
+/* Meteors (shooting stars) - strictly background layer */
+.starrynight-meteors { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; pointer-events: none; z-index: var(--layer-effect, 1); overflow: hidden; }
+.starrynight-meteors span { position: absolute; top: 50%; left: 50%; width: 3px; height: 3px; background: var(--sn-meteor-color, #fff); border-radius: 50%; box-shadow: 0 0 0 3px var(--sn-star-glow, rgba(192,132,252,0.1)),0 0 0 6px var(--sn-star-glow, rgba(192,132,252,0.1)),0 0 15px var(--sn-star-glow, rgba(192,132,252,0.1)); animation: animate 3s linear infinite; }
+.starrynight-meteors span::before { content: ""; position: absolute; top: 50%; transform: translateY(-50%); width: 220px; height: 1px; background: linear-gradient(90deg,var(--sn-star-trail-color,#d8b4fe),transparent); }
 @keyframes animate { 0% { transform: rotate(315deg) translateX(0); opacity: 1; } 70% { opacity: 1; } 100% { transform: rotate(315deg) translateX(-1000px); opacity: 0; } }
-.starrynight-meteors span:nth-child(1) { top: 0; right: 0; left: initial; animation-delay: 0s; animation-duration: 1s; }
-.starrynight-meteors span:nth-child(2) { top: 0; right: 80px; left: initial; animation-delay: 0.2s; animation-duration: 3s; }
-.starrynight-meteors span:nth-child(3) { top: 80px; right: 0px; left: initial; animation-delay: 0.4s; animation-duration: 2s; }
-.starrynight-meteors span:nth-child(4) { top: 0; right: 180px; left: initial; animation-delay: 0.6s; animation-duration: 1.5s; }
-.starrynight-meteors span:nth-child(5) { top: 0; right: 260px; left: initial; animation-delay: 0.8s; animation-duration: 2.5s; }
-.starrynight-meteors span:nth-child(6) { top: 0; right: 400px; left: initial; animation-delay: 1s; animation-duration: 3s; }
-.starrynight-meteors span:nth-child(7) { top: 300px; right: 0px; left: initial; animation-delay: 1.2s; animation-duration: 1.75s; }
-.starrynight-meteors span:nth-child(8) { top: 0px; right: 700px; left: initial; animation-delay: 1.4s; animation-duration: 1.25s; }
-.starrynight-meteors span:nth-child(9) { top: 0px; right: 1000px; left: initial; animation-delay: 0.75s; animation-duration: 2.25s; }
-.starrynight-meteors span:nth-child(10) { top: 0px; right: 450px; left: initial; animation-delay: 2.75s; animation-duration: 2.75s; }
+.starrynight-meteors span:nth-child(1) { top: 0; right: 0; left: initial; animation-delay: 0s; animation-duration: 1.2s; }
+.starrynight-meteors span:nth-child(2) { top: 0; right: 80px; left: initial; animation-delay: 0.4s; animation-duration: 3s; }
+.starrynight-meteors span:nth-child(3) { top: 80px; right: 0px; left: initial; animation-delay: 0.8s; animation-duration: 2.2s; }
+.starrynight-meteors span:nth-child(4) { top: 0; right: 180px; left: initial; animation-delay: 1.2s; animation-duration: 1.8s; }
+.starrynight-meteors span:nth-child(5) { top: 0; right: 260px; left: initial; animation-delay: 1.6s; animation-duration: 2.6s; }
+.starrynight-meteors span:nth-child(6) { top: 0; right: 400px; left: initial; animation-delay: 2s; animation-duration: 3.2s; }
+.starrynight-meteors span:nth-child(7) { top: 300px; right: 0px; left: initial; animation-delay: 2.4s; animation-duration: 2s; }
+.starrynight-meteors span:nth-child(8) { top: 0px; right: 700px; left: initial; animation-delay: 2.8s; animation-duration: 1.5s; }
+.starrynight-meteors span:nth-child(9) { top: 0px; right: 1000px; left: initial; animation-delay: 1.4s; animation-duration: 2.5s; }
+.starrynight-meteors span:nth-child(10) { top: 0px; right: 450px; left: initial; animation-delay: 3.2s; animation-duration: 2.8s; }
 
 `
 
@@ -71,10 +71,10 @@ const StarryNight: Component = () => {
         // set theme variables
         const applyThemeVars = () => {
             const isDark = theme.colorScheme === 'dark'
-            const starColor = isDark ? '#ffffff' : '#b86b1a'
-            const starTrail = isDark ? 'rgba(255,255,255,0.9)' : 'rgba(184,107,26,0.95)'
-            const starGlow = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(184,107,26,0.12)'
-            const meteorColor = isDark ? '#ffffff' : '#b86b1a'
+            const starColor = isDark ? '#f5f3ff' : '#6b21a8'
+            const starTrail = isDark ? 'rgba(216, 180, 254, 0.85)' : 'rgba(107, 33, 168, 0.9)'
+            const starGlow = isDark ? 'rgba(192, 132, 252, 0.18)' : 'rgba(107, 33, 168, 0.15)'
+            const meteorColor = isDark ? '#fdf4ff' : '#581c87'
             document.documentElement.style.setProperty('--sn-star-color', starColor)
             document.documentElement.style.setProperty('--sn-star-trail-color', starTrail)
             document.documentElement.style.setProperty('--sn-star-glow', starGlow)
@@ -95,15 +95,15 @@ const StarryNight: Component = () => {
                 container.style.width = '100%'
                 container.style.height = '100%'
                 container.style.pointerEvents = 'none'
-                container.style.zIndex = '3'
+                container.style.zIndex = 'var(--layer-effect, 1)'
                 document.body.appendChild(container)
             }
             return container
         }
 
         function initStars() {
-            const totalStars = 400
-            const flickerCount = 80
+            const totalStars = 130
+            const flickerCount = 28
             const container = createContainerIfMissing()
             if (container.dataset.ctInitialized === '1') return
 

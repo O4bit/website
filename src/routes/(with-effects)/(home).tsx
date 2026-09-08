@@ -5,6 +5,7 @@ import { Column, Page, Row, Section } from '~/components/Page'
 import ProjectCard from '~/components/ProjectCard'
 import Touchable from '~/components/Touchable'
 import { LinkButton, LinkIconButton } from '~/components/buttons'
+import LastFmWidget from '~/components/widgets/LastFmWidget'
 
 import IconDiscord from '~/assets/icons/discord.svg'
 import IconMail from '~/assets/icons/mail.svg'
@@ -101,6 +102,7 @@ export default (() => {
                         )}
                     </For>
                 </Row>
+                <LastFmWidget />
             </Section>
             <Section centerHorizontal constrainSize>
                 <h2 class={styles.JSXHeadingStart} aria-label="Projects">

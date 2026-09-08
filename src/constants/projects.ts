@@ -12,7 +12,7 @@ const Projects = [
     },
     {
         name: 'Vertronix-Systems',
-        description: 'Vertronix Systems builds auditable hardware and software. Every component is open-source — from schematics to firmware. No black boxes.',
+        description: 'Vertronix Systems builds hardware and software. Every component is open-source — from schematics to firmware.',
         image: '/assets/images/projects/Vertronix Logo Compact.png',
         href: 'https://vertronix-systems.net',
         hint: 'View website',
@@ -31,11 +31,11 @@ const Projects = [
     {
         name: 'Project Asteria',
         description: 'Discover space right from your phone with astronomy pictures with the Project Asteria app.',
-        href: 'https://github.com/O4bit/project-asteria',
+        href: 'https://f-droid.org/en/packages/space.o4bit.projectasteria.foss/',
         image: '/assets/images/projects/ic_launcher-playstore.png',
-        hint: 'View website',
+        hint: 'View on F-Droid',
         width: '130px',
-        height: '131px',    
+        height: '131px',
     },
     {
         name: 'Other projects',
@@ -44,9 +44,9 @@ const Projects = [
         image: '/assets/images/projects/github.svg',
         hint: 'Explore more',
         width: '130px',
-        height: '131px',    
+        height: '131px',
     }
-    
+
 ] as const satisfies ProjectCardProps[]
 
 export default Projects

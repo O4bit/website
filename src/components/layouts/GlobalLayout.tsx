@@ -15,6 +15,7 @@ import IconSource from '~/assets/icons/source.svg'
 
 import { BottomBannerContext, ConfettiContext, ThemeContext } from '~/contexts'
 import sharedStyles from '~/styles/shared.module.css'
+import styles from './GlobalLayout.module.scss'
 
 const GlobalLayout: Component<{ children: JSX.Element }> = props => {
     const theme = useContext(ThemeContext)
@@ -68,6 +69,7 @@ const GlobalLayout: Component<{ children: JSX.Element }> = props => {
                 style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: var(--layer-overlay);"
             />
             <StarryNight />
+            <div class={styles.BackgroundScrim} aria-hidden="true" />
             <NavDock
                 pages={[
                     { name: 'Home', href: '/', icon: IconHome },

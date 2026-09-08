@@ -15,7 +15,6 @@
     "@solidjs/router": "^0.13.6",
     "@solidjs/start": "^1.0.8",
     "@rollup/rollup-linux-x64-gnu": "^4.40.0",
-    "bun": "^1.2.5",
     "js-confetti": "^0.13.1",
     "solid-js": "^1.9.15",
     "timeago.js": "^4.0.2"

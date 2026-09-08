@@ -1,11 +1,8 @@
 [build]
-  command   = "bun run build"
-  publish   = "dist"
+  command = "bun run build"
+  publish = "dist"
+  functions = ".netlify/functions-internal/server"
 
 [build.environment]
   NODE_VERSION = "22"
-  BUN_VERSION  = "latest"
-
-# Bun is the package manager — tell Netlify not to use npm/yarn
-[build.processing]
-  skip_processing = false
+  BUN_VERSION  = "1.3.14"

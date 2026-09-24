@@ -27,7 +27,7 @@ export default (() => {
             <Title>Orbit (O4bit)</Title>
             <Meta
                 name="description"
-                content={`I'm Orbit, a Backend Developer and Software Developer. I handle everything from APIs to databases and much more.`}
+                content={`Big tech enthusiast, Software dev and sometimes a DJ. I mostly do android projects in kotlin specifically but, I also know my way around Backend systems.`}
             />
             <Meta property="og:image" content="/assets/og/image.webp" />
             <Meta property="og:image:width" content="500" />
@@ -85,7 +85,7 @@ export default (() => {
                         <span aria-hidden="true">!</span>
                     </h1>
                     <p style="text-wrap: balance">
-                        I'm Orbit, a Backend Developer and Software Developer. I handle everything from APIs to databases and much more.
+                        Big tech enthusiast, Software dev and sometimes a DJ. I mostly do android projects in kotlin specifically but, I also know my way around Backend systems.
                     </p>
                 </Column>
                 <Row as="ul" data-no-marker="true" gap="md" centerHorizontal wrap aria-label="My socials">

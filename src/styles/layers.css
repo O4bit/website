@@ -1,14 +1,8 @@
 :root {
-	--layer-background: 0;
-	--layer-effect: 1;
-	--layer-scrim: 2;
-	--layer-content: 3;
-	--layer-nav: 10;
-	--layer-overlay: 20;
-}
-
-img,
-svg {
-	position: relative;
-	z-index: var(--layer-content);
+    --layer-background: 0;
+    --layer-scrim: 1;
+    --layer-effect: 2;
+    --layer-content: 3;
+    --layer-nav: 10;
+    --layer-overlay: 20;
 }

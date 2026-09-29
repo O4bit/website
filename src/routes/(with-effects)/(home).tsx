@@ -29,10 +29,10 @@ export default (() => {
                 name="description"
                 content={`Big tech enthusiast, Software dev and sometimes a DJ. I mostly do android projects in kotlin specifically but, I also know my way around Backend systems.`}
             />
-            <Meta property="og:image" content="/assets/og/image.webp" />
+            <Meta property="og:image" content="/assets/og/o4bit.png" />
             <Meta property="og:image:width" content="500" />
             <Meta property="og:image:height" content="500" />
-            <Meta property="og:image:type" content="image/webp" />
+            <Meta property="og:image:type" content="image/png" />
             <Section constrainSize style="padding-block: 0 min(8vh, var(--gap-insanely-large));">
                 <div
                     style={{
@@ -66,7 +66,7 @@ export default (() => {
                 >
                     <img
                         class={styles.Portrait}
-                        src="/assets/og/ezgif-7-2eaf8a8b05.gif"
+                        src="/assets/og/o4bit.png"
                         alt="Silly Astronaut guy :p"
                         draggable="false"
                         style={{ 'border-radius': 'var(--radius-large, 16px)' }}

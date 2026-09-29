@@ -72,6 +72,14 @@
   }
 }
 
+.Portrait {
+  width: 320px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
 .SkillItem {
   flex: 1;
 

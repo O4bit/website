@@ -55,7 +55,7 @@
 }
 
 :root[data-theme="dark"] {
-	--bg: #0c0a10;
+	--bg: #080614;
 	--bg-orb: radial-gradient(
 		circle at 50% 50%,
 		rgba(168, 85, 247, 0.22) 0%,
